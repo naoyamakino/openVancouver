@@ -21,3 +21,5 @@ tmp/**/*
 *~
 *.swp
 .swo
+#have twitter api secret key.
+config/initializers/omniauth.rb

@@ -1,4 +1,6 @@
 OpenVancouver::Application.routes.draw do
+  resources :authentications
+
   resources :projects
 
   devise_for :users
