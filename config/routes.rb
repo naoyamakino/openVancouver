@@ -1,9 +1,10 @@
 OpenVancouver::Application.routes.draw do
+  match '/auth/:provider/callback' => 'authentications#create'
   resources :authentications
 
   resources :projects
 
-  devise_for :users
+  devise_for :users, :controllers => {:registrations => 'registrations'}
 
   root :to => "projects#index"
   # The priority is based upon order of creation:
